@@ -23,7 +23,6 @@ function deleteDigit(n) {
   }
   return parseInt(numArr.join(""))
 }
-deleteDigit(546321)
 
 module.exports = {
   deleteDigit

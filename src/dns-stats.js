@@ -22,11 +22,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  * }
  *
  */
- domains = [
-    'code.yandex.ru',
-    'music.yandex.ru',
-    'yandex.ru'
-   ]
+   
 function getDNSStats(domains) {
   const dnsObj = {}
   domains.forEach(element => {

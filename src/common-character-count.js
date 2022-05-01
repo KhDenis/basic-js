@@ -17,7 +17,7 @@ function getCommonCharacterCount(s1, s2) {
   let commonChars = 0
   for(i=0;i<s1.length;i++){
     for(j=0;j<s2.length;j++){
-      if(s1[i]==s2[j]){
+      if(s1[i]==s2[j]&&typeof(s1[i])!== "undefined"){
         console.log(s1[i],' ',s2[j])
         commonChars++
         delete s1[i]
@@ -30,9 +30,7 @@ function getCommonCharacterCount(s1, s2) {
   return parseInt(commonChars) 
 
 }
-
-
-console.log(getCommonCharacterCount("abc",""))
+console.log(getCommonCharacterCount('aabcc', 'adcaa'))
 module.exports = {
   getCommonCharacterCount
 };

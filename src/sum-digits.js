@@ -22,7 +22,7 @@ function getSumOfDigits(n) {
       }
       digit = step.toString().split("")
     }
-  return console.log(step)
+  return step
   // remove line with error and write your code here
 }
 

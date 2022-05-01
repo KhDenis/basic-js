@@ -13,12 +13,33 @@ const { NotImplementedError } = require('../extensions/index.js');
  * createDreamTeam(['Olivia', 1111, 'Lily', 'Oscar', true, null]) => 'LOO'
  *
  */
- members = ['Olivia', 1111, 'Lily', 'Oscar', true, null]
+ members = [
+  ['David Abram'],
+  ['Robin Attfield'],
+  'Thomas Berry',
+  ['Paul R.Ehrlich'],
+  'donna Haraway',
+  ' BrIaN_gOodWiN  ',
+  {
+    0: 'Serenella Iovino'
+  },
+  'Erazim Kohak',
+  '  val_plumwood',
+]
+//BDETV
+//  members = [1, 2, 3]
 function createDreamTeam( members ) {
-  let trueMembers = members.filter(elem => typeof(elem) == 'string' && elem.toString().length>0)
-  return trueMembers.map(e => e = e[0]).join("")
+  console.log(Array.isArray(members))
+  let trueMembers =[]
+  if (Array.isArray(members)){
+    trueMembers = members.filter(elem => typeof(elem) == 'string' && elem.toString().length>0)
+  }
+  else return false
+  if(trueMembers.length<1){return false}
+  let arr = trueMembers.map(e => e = e.match("[a-zA-Z]")).toString().toUpperCase().split(",").sort().join("")
+  return arr
 }
-
+console.log(createDreamTeam(members))
 module.exports = {
   createDreamTeam
 };
